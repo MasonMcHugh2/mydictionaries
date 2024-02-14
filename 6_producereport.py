@@ -207,3 +207,12 @@ ProduceDictionary={
     }
 }
 
+for d in ProduceDictionary:
+    correct_total = ProduceDictionary[d]['cost'] * ProduceDictionary[d]['amt_sold']
+    correct_total = round(correct_total,2)
+    if ProduceDictionary[d]['total'] != correct_total:
+        print(f"produce name: {d}")
+        print(f"Calculated total: ${correct_total}")
+        print(f"Stated total: ${ProduceDictionary[d]['total']}")
+        print()
+        print()
