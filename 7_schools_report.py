@@ -39,7 +39,8 @@ for row in list_of_schools:
 for row in list_of_schools:
         if  row['NCAA']['NAIA conference number football (IC2020)'] in conference_schools:
             if row['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']:
-                print(f"University: {row['instnm']}")
-                print(f"Total price for in-state students living off campus : ${row['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']:,.2f}")
-                print()
-                print()
+                if row['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)'] > 50000:
+                    print(f"University: {row['instnm']}")
+                    print(f"Total price for in-state students living off campus : ${row['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']:,.2f}")
+                    print()
+                    print()
